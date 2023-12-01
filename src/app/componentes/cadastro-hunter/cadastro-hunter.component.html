@@ -1,0 +1,115 @@
+<section class="container criar-hunters ff-inter">
+  <header class="header" >
+      <h2>Adicione um <br> hunter novo:</h2>
+  </header>
+  <form>
+      <div class="CampoDePreenchimento">
+        <label for="hunter">Hunter : </label>
+        <input [(ngModel)] = "cadastro.nome"
+          type="textarea"
+          class="input"
+          id="nome_hunter"
+          name="nome_hunter"
+          placeholder="Digite o nome do hunter"
+
+            >
+      </div>
+
+      <div class="CampoDePreenchimento">
+        <label for="Descrição">Descrição : </label>
+        <input [(ngModel)] = "cadastro.descricao"
+          type="textarea"
+          class="input"
+          id="descrição"
+          name="descrição"
+          placeholder="Digite a descrição"
+            >
+      </div>
+
+      <div class="CampoDePreenchimento">
+        <label for="provasfeitas">Provas feitas : </label>
+        <input [(ngModel)] = "cadastro.provasfeitas"
+          type="textarea"
+          class="input"
+          id="provasfeitas"
+          name="provasfeitas"
+          placeholder="Digite a quantidade de provasfeitas"
+            >
+      </div>
+
+      <div class="CampoDePreenchimento">
+        <label for="estrelas">Estrelas : </label>
+        <input [(ngModel)] = "cadastro.estrelas"
+          type="textarea"
+          class="input"
+          id="estrelas"
+          name="estrelas"
+          placeholder="Digite a quantidade de  estrelas"
+            >
+      </div>
+
+      <div class="CampoDePreenchimento">
+        <label for="temlicenca">Tem licença : </label>
+        <input [(ngModel)] = "cadastro.temlicenca"
+          type="textarea"
+          class="input"
+          id="temlicenca"
+          name="temlicenca"
+          placeholder="temlicenca"
+            >
+      </div>
+
+      <div class="CampoDePreenchimento">
+        <label for="nem">Nen : </label>
+        <input [(ngModel)] = "cadastro.nem"
+          type="textarea"
+          class="input"
+          id="nem"
+          name="nem"
+          placeholder="nem"
+            >
+      </div>
+
+      <div class="CampoDePreenchimento">
+        <label for="pais">Pais : </label>
+        <input [(ngModel)] = "cadastro.pais"
+          type="textarea"
+          class="input"
+          id="pais"
+          name="pais"
+          placeholder="pais"
+            >
+
+      </div>
+
+      <div class="CampoDePreenchimento">
+        <label for="continente">Continente : </label>
+        <input [(ngModel)] = "cadastro.continente"
+          type="textarea"
+          class="input"
+          id="continente"
+          name="continente"
+          placeholder="continente"
+            >
+      </div>
+
+      <div class="CampoDePreenchimento">
+        <label for="localizaçãoconhecida">Localização conhecida: </label>
+        <input [(ngModel)] = "cadastro.localizacaoconhecida"
+          type="textarea"
+          class="input"
+          id="localizaçãoconhecida"
+          name="localizaçãoconhecida"
+          placeholder="localizaçãoconhecida"
+            >
+      </div>
+
+    </form>
+
+
+
+    <div class="acoes"> <!--   //event binding    -->
+      <button (click)="cadastrar()">Salvar</button>
+      <button (click)="cancelar()" class="botao">Cancelar</button>
+  </div>
+</section>

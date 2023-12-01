@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+}
+
+header {
+  background-color: rgb(19, 114, 0);
+  display: flex;
+  flex-wrap: wrap; /* so navbar will go under logo on small smartphones */
+  align-items: baseline;
+  padding: 0.5rem;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 200px;
+  margin-top: 16px;
+  cursor: pointer;
+}
+.nav{
+  display:flex;
+  gap: 1rem;
+}
+.link {
+  background: none;
+  border: none;
+  text-decoration: none;
+  color: #000000;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
+.link:hover {
+  color: black;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+}
