@@ -1,0 +1,38 @@
+<div class="container">
+
+    
+    <h2 class="text-center">hunter List</h2>
+
+    <label>  Mostrar hunters Ativos ? </label>
+    <select  [(ngModel)]="escolha" (change)="seletormudou()">
+        <option id="true" >Sim </option>
+        <option id="false">Não</option>
+    </select>
+
+    <table class="table table-stripped" >
+        <thead>
+            <tr>
+                <th>nome</th>
+                <th>descricao</th>
+                <th>estrelas</th>
+                <th>provasfeitas</th>
+                <th>temlicenca</th>
+                <th>nem</th> 
+                <th>ativo</th> 
+            </tr>
+        </thead> 
+        <tbody>
+            <tr *ngFor="let hunter of hunters">
+                <td> {{ hunter?.nome }} </td>
+                <td> {{ hunter?.descricao }} </td>
+                <td> {{ hunter?.estrelas }} </td>
+                <td> {{ hunter?.provasfeitas }} </td>
+                <td> {{ hunter?.temlicenca }} </td>
+                <td> {{ hunter?.nem }} </td>
+                <button (click) = "atualizar(hunter.id)" class="btn btn-info">Editar</button>
+                <button (click) = "AtivarHunter(hunter.id)" class="btn btn-info">Ativar Hunter</button>
+                <button (click) = "excluir(hunter.id)" class="btn btn-danger">Delete</button>
+            </tr>
+        </tbody>
+    </table>
+</div>

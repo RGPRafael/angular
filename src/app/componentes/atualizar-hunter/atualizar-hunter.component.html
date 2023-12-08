@@ -1,0 +1,32 @@
+<div class="container">
+    <h2 class="text-center">Atualizar Hunter</h2>
+    <form (ngSubmit) = "onSubmit()">
+        <div class="form-group">
+            <label for="nome"> nome</label>
+            <input type="text" class="form-control" id="nome" [(ngModel)]="hunter.nome" name="firstName">
+        </div>
+        <div class="form-group">
+            <label for="descricao"> descricao</label>
+            <input type="text" class="form-control" id="descricao" [(ngModel)]="hunter.descricao" name="descricao">
+        </div>
+        <div class="form-group">
+            <label for="estrelas">estrelas</label>
+            <input type="text" class="form-control" id="estrelas" [(ngModel)]="hunter.estrelas" name="estrelas">
+        </div>
+        <div class="form-group">
+            <label for="provasfeitas">provasfeitas</label>
+            <input type="provasfeitas" class="form-control" id="provasfeitas" [(ngModel)]="hunter.provasfeitas" name="provasfeitas">
+        </div>
+        <div class="form-group">
+            <label for="temlicenca">temlicenca</label>
+            <input type="temlicenca" class="form-control" id="temlicenca" [(ngModel)]="hunter.temlicenca" name="temlicenca">
+        </div>
+        <div class="form-group">
+            <label for="nem">nem</label>
+            <input type="nem" class="form-control" id="nem" [(ngModel)]="hunter.nem" name="nem">
+        </div>
+        
+
+        <button class="btn btn-success mt-2" type="submit">Atualizar </button>
+     </form>
+</div>

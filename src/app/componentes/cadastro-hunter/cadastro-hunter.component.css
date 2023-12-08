@@ -1,5 +1,5 @@
 .CampoDePreenchimento{
-  margin: 1%;
+  margin: 0;
 }
 label{
   color: #fdfdfd;
@@ -7,4 +7,7 @@ label{
 
 .header{
   color: #fdfdfd;
+}
+*{
+  padding: 0;
 }

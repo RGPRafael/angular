@@ -16,11 +16,11 @@ export class CadastroHunterComponent implements OnInit {
     "descricao":'',
     "estrelas":'',
     "provasfeitas": '',
-    "temlicenca": '',
+    "temlicenca":false,
     "nem": '',
     "pais": '',
     "continente": '',
-    "localizacaoconhecida": ''
+    "localizacaoconhecida": false
 
   }
   constructor(private  service : ServiceService) { }
