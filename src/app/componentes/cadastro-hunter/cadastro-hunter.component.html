@@ -3,114 +3,119 @@
   <header class="header" >
       <h2>Adicione um <br> hunter novo:</h2>
   </header>
-  <form >
+  <form class="form">
       <div class="CampoDePreenchimento">
-        <label for="hunter">Hunter : </label>
+       
         <input [(ngModel)] = "cadastro.nome"
           type="textarea"
           class="input"
           id="nome_hunter"
           name="nome_hunter"
-          placeholder="Digite o nome do hunter"
+          placeholder="Nome "
 
             >
       </div>
 
       <div class="CampoDePreenchimento">
-        <label for="Descrição">Descrição : </label>
+        
         <input [(ngModel)] = "cadastro.descricao"
           type="textarea"
           class="input"
           id="descrição"
           name="descrição"
-          placeholder="Digite a descrição"
+          placeholder="Descrição"
             >
       </div>
 
       <div class="CampoDePreenchimento">
-        <label for="provasfeitas">Provas feitas : </label>
+        
         <input [(ngModel)] = "cadastro.provasfeitas"
           type="textarea"
           class="input"
           id="provasfeitas"
           name="provasfeitas"
-          placeholder="Digite a quantidade de provasfeitas"
+          placeholder="Provas feitas"
             >
       </div>
 
       <div class="CampoDePreenchimento">
-        <label for="estrelas">Estrelas : </label>
-        <input [(ngModel)] = "cadastro.estrelas"
-          type="textarea"
-          class="input"
-          id="estrelas"
-          name="estrelas"
-          placeholder="Digite a quantidade de  estrelas"
-            >
+
+        <div  class="rate">
+          <input [(ngModel)] = "cadastro.estrelas" type="radio" id="star5" name="rate" value="5" />
+          <label for="star5" title="text">5 stars</label>
+          <input [(ngModel)] = "cadastro.estrelas" type="radio" id="star4" name="rate" value="4" />
+          <label for="star4" title="text">4 stars</label>
+          <input [(ngModel)] = "cadastro.estrelas" type="radio" id="star3" name="rate" value="3" />
+          <label for="star3" title="text">3 stars</label>
+          <input [(ngModel)] = "cadastro.estrelas" type="radio" id="star2" name="rate" value="2" />
+          <label for="star2" title="text">2 stars</label>
+          <input [(ngModel)] = "cadastro.estrelas" type="radio" id="star1" name="rate" value="1" />
+          <label for="star1" title="text">1 star</label>
+        </div>
       </div>
 
       <div class="CampoDePreenchimento">
-        <label for="temlicenca">Tem licença : </label>
-        <input [(ngModel)] = "cadastro.temlicenca"
-          type="textarea"
-          class="input"
-          id="temlicenca"
-          name="temlicenca"
-          placeholder="temlicenca"
-            >
+        <span>
+          Tem Liçenca 
+        </span>
+
+        <label class="switch">
+          <input  [(ngModel)] = "cadastro.temlicenca" type="checkbox">
+          <span class="slider"></span>
+        </label>
+
+        
       </div>
 
       <div class="CampoDePreenchimento">
-        <label for="nem">Nen : </label>
+       
         <input [(ngModel)] = "cadastro.nem"
           type="textarea"
           class="input"
           id="nem"
           name="nem"
-          placeholder="nem"
+          placeholder="Nem"
             >
       </div>
 
       <div class="CampoDePreenchimento">
-        <label for="pais">Pais : </label>
-        <input [(ngModel)] = "cadastro.pais"
-          type="textarea"
-          class="input"
-          id="pais"
-          name="pais"
-          placeholder="pais"
-            >
+
+      <select class="form-control" name="country" id="country" [(ngModel)]="cadastro.pais">
+          <option value="" disabled selected>Selecionar País</option>
+          <option *ngFor="let country of countries" [value]="country.name">{{country.name}}</option>
+     </select>
+        
+        
 
       </div>
 
       <div class="CampoDePreenchimento">
-        <label for="continente">Continente : </label>
+       
         <input [(ngModel)] = "cadastro.continente"
           type="textarea"
           class="input"
           id="continente"
           name="continente"
-          placeholder="continente"
+          placeholder="Continente"
             >
       </div>
 
       <div class="CampoDePreenchimento">
-        <label for="localizaçãoconhecida">Localização conhecida: </label>
-        <input [(ngModel)] = "cadastro.localizacaoconhecida"
-          type="textarea"
-          class="input"
-          id="localizaçãoconhecida"
-          name="localizaçãoconhecida"
-          placeholder="localizaçãoconhecida"
-            >
+
+        <span>
+          localizacao conhecida? 
+        </span>
+
+        <label class="switch">
+          <input  [(ngModel)] = "cadastro.localizacaoconhecida" type="checkbox">
+          <span class="slider"></span>
+        </label>
+       
+       
       </div>
-
+      <div class="action"> <!--   //event binding    -->
+        <button (click)="cadastrar()">Salvar</button>
+        <button (click)="cancelar()" class="botao">Cancelar</button>
+    </div>
     </form>
-
-
-
-    <div class="acoes"> <!--   //event binding    -->
-      <button (click)="cadastrar()">Salvar</button>
-      <button (click)="cancelar()" class="botao">Cancelar</button>
-  </div>
 </section>

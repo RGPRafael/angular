@@ -5,11 +5,17 @@ import { EditarhunterComponent } from './componentes/ListarTodosHunters/ListarTo
 import { ExcluirhunterComponent } from './componentes/excluirhunter/excluirhunter.component';
 import { MenuinicialComponent } from './componentes/menuinicial/menuinicial.component';
 import { AtualizarHunterComponent } from './componentes/atualizar-hunter/atualizar-hunter.component';
+import { LoginComponent } from './componentes/login/login.component';
+import { CadastroUsuarioComponent } from './componentes/cadastro-usuario/cadastro-usuario.component';
+import { RedefinirSenhaComponent } from './componentes/redefinir-senha/redefinir-senha.component';
+import { SenhaProvisoriaComponent } from './componentes/senha-provisoria/senha-provisoria.component';
+import { NovaSenhaComponent } from './componentes/nova-senha/nova-senha.component';
+import { CriarnovasenhaComponent } from './componentes/criarnovasenha/criarnovasenha.component';
 
 const routes: Routes = [
 
   { 
-    path: '', component: MenuinicialComponent 
+    path: '', component: LoginComponent 
   },
 
   {
@@ -24,6 +30,21 @@ const routes: Routes = [
   },
 
   { path: 'atualizar-hunter/:id', component: AtualizarHunterComponent },
+
+
+  { path: 'cadastroUsuario', component: CadastroUsuarioComponent },
+
+  { path: 'Redefinir Senha', component: RedefinirSenhaComponent },
+
+  { path: 'Menu Inicial', component: MenuinicialComponent },
+
+
+  { path: 'SenhaProvisoria', component: SenhaProvisoriaComponent },
+  
+  { path: 'Nova Senha', component: NovaSenhaComponent },
+
+  { path: 'CriarNovaSenha', component: CriarnovasenhaComponent }
+
 
 ];
 

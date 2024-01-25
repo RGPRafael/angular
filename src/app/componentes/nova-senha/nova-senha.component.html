@@ -2,12 +2,12 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'><link rel="stylesheet" href="./login.component.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'><link rel="stylesheet" href="./nova-senha.component.css">
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<div class="login-form" *ngIf = !isLogado()>
+<div class="login-form">
   <form>
     <h1>Login</h1>
     <div class="content">
@@ -17,12 +17,10 @@
       <div class="input-field">
         <input [(ngModel)] = "usuario.senha" type="password" placeholder="Password" autocomplete="new-password" name="senha">
       </div>
-      <a href="#"routerLink="/Redefinir Senha" class="link">Esqueceu a senha?</a>
+      
     </div>
     <div class="action">
-      <button   (click)="Entrar()">Entrar</button>
-      <button routerLink="/cadastroUsuario" class="botao">Novo Usuario</button>
-
+      <button (click)="VerificarSenhaProvisoria()">Redefinir Senha</button>
     </div>
   </form>
 </div>

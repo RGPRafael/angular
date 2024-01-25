@@ -3,9 +3,9 @@ export interface Cadastro{
   descricao: string  
   estrelas?: string
   provasfeitas: string
-  temlicenca: boolean // boolean
+  temlicenca?: boolean // boolean
   nem: string
   pais: string
   continente: string
-  localizacaoconhecida: boolean // boolean
+  localizacaoconhecida?: boolean // boolean
 }

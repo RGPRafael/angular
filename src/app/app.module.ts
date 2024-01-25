@@ -12,6 +12,12 @@ import { LoginComponent } from './componentes/login/login.component';
 import { EditarhunterComponent } from './componentes/ListarTodosHunters/ListarTodosHunters.component';
 import { MenuinicialComponent } from './componentes/menuinicial/menuinicial.component';
 import { AtualizarHunterComponent } from './componentes/atualizar-hunter/atualizar-hunter.component';
+import { CadastroUsuarioComponent } from './componentes/cadastro-usuario/cadastro-usuario.component';
+import { RedefinirSenhaComponent } from './componentes/redefinir-senha/redefinir-senha.component';
+import { SenhaProvisoriaComponent } from './componentes/senha-provisoria/senha-provisoria.component';
+import { NovaSenhaComponent } from './componentes/nova-senha/nova-senha.component';
+import { CriarnovasenhaComponent } from './componentes/criarnovasenha/criarnovasenha.component';
+import { WelcomeComponent } from './componentes/welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +28,13 @@ import { AtualizarHunterComponent } from './componentes/atualizar-hunter/atualiz
     LoginComponent,
     EditarhunterComponent,
     MenuinicialComponent,
-    AtualizarHunterComponent
+    AtualizarHunterComponent,
+    CadastroUsuarioComponent,
+    RedefinirSenhaComponent,
+    SenhaProvisoriaComponent,
+    NovaSenhaComponent,
+    CriarnovasenhaComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,16 +1,20 @@
-/*main {
-  background: url("/assets/imagens/hunter_x_hunter_leorio_wallpaper.png") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 
-}*/
 
-*{
-  background-color:rgb(19, 114, 0);
-  
-
+/* Ensure app-cabecalho stays at the top */
+.stickNav{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    overflow: hidden;
+    z-index: 2;
 }
 
+/* Dynamically loaded content */
+main {
+  flex: 1; /* Allow the main section to grow and take up remaining space */
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+}
 

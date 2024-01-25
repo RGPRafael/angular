@@ -9,7 +9,7 @@
         <option id="false">Não</option>
     </select>
 
-    <table class="table table-stripped" >
+    <table class="table table-striped" >
         <thead>
             <tr>
                 <th>nome</th>
@@ -23,6 +23,9 @@
         </thead> 
         <tbody>
             <tr *ngFor="let hunter of hunters">
+                <td>
+                    <input type="checkbox" #checkbox (change)="updateSelectedHunters(hunter.id, checkbox.checked)">                
+                </td>
                 <td> {{ hunter?.nome }} </td>
                 <td> {{ hunter?.descricao }} </td>
                 <td> {{ hunter?.estrelas }} </td>
@@ -34,5 +37,6 @@
                 <button (click) = "excluir(hunter.id)" class="btn btn-danger">Delete</button>
             </tr>
         </tbody>
+        <button (click)="deleteSelectedHunters()" class="btn btn-danger">Delete Selected Hunters</button>
     </table>
 </div>

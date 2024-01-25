@@ -1,13 +1,183 @@
-.CampoDePreenchimento{
+/*https://codepen.io/hesguru/pen/BaybqXv   */
+
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
-label{
-  color: #fdfdfd;
+body {
+  background: #00AD83;
+  font-family: 'Rubik', sans-serif;
 }
 
-.header{
-  color: #fdfdfd;
+.form {
+  background: #00AD83;
+  width: 500px;
+  margin: 65px auto;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  border-radius: 4px;
+  box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2);
 }
-*{
-  padding: 0;
+
+.CampoDePreenchimento {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+.text {
+  margin-right: 10px; /* Adjust the margin as needed */
+}
+
+.form .CampoDePreenchimento {
+  padding: 12px 5px;
+}
+
+
+.form .CampoDePreenchimento input::-webkit-input-placeholder {
+  text-transform: uppercase;
+}
+.form .CampoDePreenchimento input::-moz-placeholder {
+  text-transform: uppercase;
+}
+.form .CampoDePreenchimento input:-ms-input-placeholder {
+  text-transform: uppercase;
+}
+.form .CampoDePreenchimento input::-ms-input-placeholder {
+  text-transform: uppercase;
+}
+.form .CampoDePreenchimento input::placeholder {
+  text-transform: uppercase;
+}
+.form .CampoDePreenchimento input:focus {
+  border-color: #222;
+}
+
+
+
+.form .action button {
+  width: 100%;
+  border: none;
+  padding: 18px;
+  font-family: 'Rubik', sans-serif;
+  cursor: pointer;
+  text-transform: uppercase;
+  background: #e8e9ec;
+  color: #777;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 0;
+  letter-spacing: 0.2px;
+  outline: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.form .action button:hover {
+  background: #d8d8d8;
+}
+.form .action button:nth-child(2) {
+  background: #2d3b55;
+  color: #fff;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 4px;
+}
+.form .action button:nth-child(2):hover {
+  background: #3c4d6d;
+}
+
+.rate {
+  float: right;
+  height: 46px;
+  padding: 0 10px;
+}
+.rate:not(:checked) > input {
+  position:absolute;
+  top:-9999px;
+}
+.rate:not(:checked) > label {
+  float:right;
+  width:1em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:30px;
+  color:#ccc;
+}
+.rate:not(:checked) > label:before {
+  content: '★ ';
+}
+.rate > input:checked ~ label {
+  color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+
+/* Modified from: https://github.com/mukulkant/Star-rating-using-pure-css */
+
+
+
+
+
+
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  border: 2px solid #414141;
+  border-radius: 50px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  left: 0.2em;
+  bottom: 0.2em;
+  background-color: white;
+  border-radius: inherit;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.switch input:checked + .slider {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  border: 2px solid #000000;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(1.5em);
+}
+
+
+/*https://uiverse.io/gharsh11032000/brave-pug-20 */

@@ -1,17 +1,13 @@
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
 
-<body>
-  <header>
-    <img class="logo" src="../../../assets/imagens/Hunter_association.svg" alt="logo">
-      <ul>
-        <li><a routerLink="/Cadastrar novo Hunter">Cadastrar novo Hunter</a></li>
-        <li><a routerLink="/Editar Hunter">Editar Hunter</a></li>
-        <li><a routerLink="/Excluir Hunter">Excluir Hunter</a></li>
+
+
+<header class="header">
+  <h1 class="logo"><a href="#">Hunters Tavern</a></h1>
+    <ul class="main-nav">
+        <li><a  *ngIf = isLogado() routerLink="/Cadastrar novo Hunter">Cadastrar novo Hunter</a></li>
+        <li><a  *ngIf = isLogado() routerLink="/Editar Hunter">Editar Hunter</a></li>
+        <li><a  *ngIf = isLogado() routerLink="/Excluir Hunter">Excluir Hunter</a></li>
         <li><a href="#">Sobre</a></li>
-        <li><a href="#">Usuário</a></li>
-      </ul>
-  </header>
-</body>
-
+        <li><a  *ngIf = isLogado() href="#">Usuário</a></li>
+    </ul>
+</header> 

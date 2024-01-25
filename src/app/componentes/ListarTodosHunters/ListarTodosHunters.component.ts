@@ -11,6 +11,9 @@ import { NONE_TYPE } from '@angular/compiler';
 })
 export class EditarhunterComponent implements OnInit {
 
+
+  selectedHunterIds: number[] = [];
+
   escolha! : boolean ;
 
   hunters: Hunter[] = []; 
@@ -68,6 +71,34 @@ export class EditarhunterComponent implements OnInit {
       console.log(data);
       //this.buscarTodos();
     });
+  }
+
+
+  deleteSelectedHunters(): void {
+    if (this.selectedHunterIds.length > 0) {
+      this.service.deleteRecords(this.selectedHunterIds).subscribe(
+        () => {
+          console.log('Records deleted successfully');
+          this.selectedHunterIds.splice;
+          // Optionally, update your UI or perform other actions after deletion
+        },
+        (error) => {
+          this.selectedHunterIds.splice;
+          console.error('Error deleting records:', error);
+        }
+      );
+    } else {
+      this.selectedHunterIds.splice;
+      console.warn('No users selected for deletion');
+    }
+  }
+
+  updateSelectedHunters(hunterId: number, isChecked: boolean): void {
+    if (isChecked) {
+      this.selectedHunterIds.push(hunterId);
+    } else {
+      this.selectedHunterIds = this.selectedHunterIds.filter((id) => id !== hunterId);
+    }
   }
 
 }

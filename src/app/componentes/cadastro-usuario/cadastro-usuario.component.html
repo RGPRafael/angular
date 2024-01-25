@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'><link rel="stylesheet" href="./cadastro-usuario.component.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="login-form">
+  <form>
+    <h1>Novo Usuario</h1>
+    <div class="content">
+      <div class="input-field">
+        <input [(ngModel)] = "usuario.email"  class="input" type="email" placeholder="Email" name="email" >
+      </div>
+      <div class="input-field">
+        <input [(ngModel)] = "usuario.senha" type="password" placeholder="Password" name="senha">
+      </div>
+    </div>
+    <div class="action">
+      <button (click)="RegistrarNovoUsuario()">Cadastrar</button>
+    </div>
+  </form>
+</div>
+</body>
+</html>

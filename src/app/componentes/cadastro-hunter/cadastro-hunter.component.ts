@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Cadastro } from './Cadastro';
 import { ServiceService } from './service.service';
+import { countries } from 'src/app/shared/country-data-store';
 
 
 @Component({
@@ -11,6 +12,12 @@ import { ServiceService } from './service.service';
 export class CadastroHunterComponent implements OnInit {
 
 
+  
+
+  public countries:any = countries
+
+  dropdownData: any[] = [];
+
   @Input() cadastro : Cadastro = {
     "nome": '', // property binding
     "descricao":'',
@@ -20,7 +27,7 @@ export class CadastroHunterComponent implements OnInit {
     "nem": '',
     "pais": '',
     "continente": '',
-    "localizacaoconhecida": false
+    "localizacaoconhecida":false 
 
   }
   constructor(private  service : ServiceService) { }
@@ -36,5 +43,12 @@ export class CadastroHunterComponent implements OnInit {
   cancelar(){
     console.log("cancelar")
   }
+
+  
+  
+
+  
+
+
 
 }
